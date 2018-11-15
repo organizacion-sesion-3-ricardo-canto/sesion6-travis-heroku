@@ -33,7 +33,7 @@
             "data" : [
                 {"name" : "name", "value" : "", "prompt" : "Nombre de la Serie"},
                 {"name" : "description", "value" : "", "prompt" : "Descripción de la Serie"},
-                {"name" : "tvPlatform", "value" : "", "prompt" : "Plataforma de la Serie"},
+                {"name" : "TVPlatform", "value" : "", "prompt" : "Plataforma de la Serie"},
                 {"name" : "applicationSubCategory", "value" : "", "prompt" : "Categoria de la Serie"},
                 {"name" : "screenshot", "value" : "", "prompt" : "URL of a captura de la serie"},
                 {"name" : "datePublished", "value" : "", "prompt" : "Fecha de lanzamiento"},
