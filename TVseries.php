@@ -9,7 +9,7 @@ class TVserie extends \Illuminate\Database\Eloquent\Model
 // Añadir el resto del código aquí
 $app->get('/tvseries', function ($req, $res, $args) {
 
-    // Creamos un objeto collection + json con la lista de películas
+    // Creamos un objeto collection + json con la lista de series
 
     // Obtenemos la lista de películas de la base de datos y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
     $seriess = json_decode(\TVSerie::all());
@@ -24,9 +24,9 @@ $app->get('/tvseries', function ($req, $res, $args) {
 /*  Obtención de una serie en concreto  */
 $app->get('/tvseries/{name}', function ($req, $res, $args) {
 
-    // Creamos un objeto collection + json con el videojuego pasada como parámetro
+    // Creamos un objeto collection + json con la serie pasada como parámetro
 
-    // Obtenemos el videojuego de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
+    // Obtenemos la serie de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
     $p = \TVSerie::find($args['name']);  
     $serie = json_decode($p);
 
@@ -62,7 +62,7 @@ $app->post('/tvseries', function ($req, $res, $args) {
         case "description":
             $desc = $datos[$i]['value'];
             break;
-        case "tvPlatform":
+        case "TVPlatform":
             $plataf = $datos[$i]['value'];
             break;
         case "applicationSubCategory":
@@ -83,7 +83,7 @@ $app->post('/tvseries', function ($req, $res, $args) {
     $tvserie = new TVserie;
     $tvserie->name = $name;
     $tvserie->description = $desc;
-    $tvserie->tvPlatform = $plataf;
+    $tvserie->TVPlatform = $plataf;
     $tvserie->applicationSubCategory = $category;
     $tvserie->screenshot =  $screenshot;
     $tvserie->datePublished = $date;
@@ -115,7 +115,7 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
         case "description":
             $description = $item['value'];
             break;
-        case "tvPlatform":
+        case "TVPlatform":
             $gamePlatform = $item['value'];
             break;
 
@@ -138,7 +138,7 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
 
 	$nuevo_tvserie['name'] = $name;
 	$nuevo_tvserie['description'] = $description;
-	$nuevo_tvserie['tvPlatform'] = $tvPlatform;
+	$nuevo_tvserie['TVPlatform'] = $tvPlatform;
 	$nuevo_tvserie['applicationSubCategory'] = $applicationSubCategory;
 	$nuevo_tvserie['screenshot'] = $screenshot;
 	$nuevo_tvserie['embedUrl'] = $embedUrl;
