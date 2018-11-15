@@ -138,7 +138,7 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
 
 	$nuevo_tvserie['name'] = $name;
 	$nuevo_tvserie['description'] = $description;
-	$nuevo_tvserie['TVPlatform'] = $tvPlatform;
+	$nuevo_tvserie['TVPlatform'] = $TVPlatform;
 	$nuevo_tvserie['applicationSubCategory'] = $applicationSubCategory;
 	$nuevo_tvserie['screenshot'] = $screenshot;
 	$nuevo_tvserie['embedUrl'] = $embedUrl;
