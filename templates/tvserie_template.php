@@ -19,7 +19,7 @@
                         "data" : [
                             {"name" : "name", "value" : "{{ item.name }}", "prompt" : "Nombre de la Serie"},
                             {"name" : "description", "value" : "{{ item.description }}", "prompt" : "Descripción de la Serie"},
-                            {"name" : "gamePlatform", "value" : "{{ item.gamePlatform }}", "prompt" : "Canal de la Serie"},
+                            {"name" : "TVPlatform", "value" : "{{ item.tvPlatform }}", "prompt" : "Canal de la Serie"},
                             {"name" : "applicationSubCategory", "value" : "{{ item.applicationSubCategory }}", "prompt" : "Categoria de la Serie"},
                             {"name" : "screenshot", "value" : "{{ item.screenshot }}", "prompt" : "URL of a captura de la serie"},
                             {"name" : "datePublished", "value" : "{{ item.datePublished }}", "prompt" : "Fecha de lanzamiento"},
@@ -33,7 +33,7 @@
             "data" : [
                 {"name" : "name", "value" : "", "prompt" : "Nombre de la Serie"},
                 {"name" : "description", "value" : "", "prompt" : "Descripción de la Serie"},
-                {"name" : "gamePlatform", "value" : "", "prompt" : "Plataforma de la Serie"},
+                {"name" : "tvPlatform", "value" : "", "prompt" : "Plataforma de la Serie"},
                 {"name" : "applicationSubCategory", "value" : "", "prompt" : "Categoria de la Serie"},
                 {"name" : "screenshot", "value" : "", "prompt" : "URL of a captura de la serie"},
                 {"name" : "datePublished", "value" : "", "prompt" : "Fecha de lanzamiento"},
