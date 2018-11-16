@@ -8,7 +8,7 @@ before_script:
 script: "./vendor/bin/phpunit ./tests"
 deploy:
   provider: heroku
-  app: travis-heroku-2
+  app: sesion6-travis-heroku-rcanto
   on: master
   skip_cleanup: true
   api_key:
