@@ -1,14 +1,15 @@
 language: php
 php:
-  - 7.2
+- 7.2
 services:
-  - mysql
+- mysql
 before_script:
-  - composer install
-script: ./vendor/bin/phpunit ./tests
+- composer install
+script: "./vendor/bin/phpunit ./tests"
 deploy:
   provider: heroku
   app: travis-heroku-2
   on: master
   skip_cleanup: true
   api_key:
+    secure: InmQ4p66OroKtrKAQcIyxQynBLe2iG2THyjitR9kjx/hDJ5rsnXNVwUiv1YyLjaTKBNreyycF6AUcjZ/Wd+JBPB6OppxZCSBIV3z8D7tMG4WTA6+ljAa81e2ymSRaJlrGTmKwbFhvxaZGq+9r0NZjIZhERfcmHpbTqh323BVFbvv2PDEfjN8/mi1nUdB3mB4xtNF5cQTxTV5i+pOxOEDtqo3SuYIVNPQksJR8ybpfX9zsb0JD6lP1fYz+mlEkSjBpNShzx9OMR10EC7Joy3R4VUk6sKBnglRvR2dGLID2tDZTwaMd02E3gg+G9U23rWN/ULLQpsFMcOrBXNpXK+s+nEq7EzQwJ8lDrngN7mL1M8hx70PvL2fW9NSI8SpbJjgBZNClWtyyUEC/w3nm8vHGBfwy15yYe4VT6hvtyLWh3lohoqRBUhVEDUEDHltURs8cFrVpGVCmhFoAbx3gfm+XArahe5yY2+rBC4vbJpt4GwxWcDWhaaePWskcz1bTZCbZEYhWCGxnnZyAODq8WpuklajmT+qa+lzVYJRwxbp5HVM7nCsX45RSI0qD0vE+ebk6SA/jtmmdIgk3UBsfGLbsm27hu0pyeXBROU6HXrW0J12OhRnR6sseDYwgG2ZFAULvNdHNyaVgmjBr7GDLh+IczbyEI7aJtSq6CQnS32lLoM=
