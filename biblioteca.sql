@@ -4,8 +4,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `biblioteca`
 --
-CREATE DATABASE `biblioteca` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
-USE `biblioteca`;
+-- CREATE DATABASE `biblioteca` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+-- USE `biblioteca`;
 
 -- --------------------------------------------------------
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `tvseries` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `description` TEXT COLLATE utf8_spanish_ci NOT NULL,
-  `tv` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `tvPlatform` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `applicationSubCategory` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `screenshot` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `embedUrl` TEXT COLLATE utf8_spanish_ci NOT NULL,
