@@ -4,6 +4,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `biblioteca`
 --
+-- DROP DATABASE `biblioteca`;
 -- CREATE DATABASE `biblioteca` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 -- USE `biblioteca`;
 
@@ -109,12 +110,12 @@ INSERT INTO `videogames` (`name`, `description`, `gamePlatform`, `applicationSub
 --
 -- Estructura de tabla para la tabla `tvseries`
 --
-
+-- DROP TABLE `tvseries`;
 CREATE TABLE IF NOT EXISTS `tvseries` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `description` TEXT COLLATE utf8_spanish_ci NOT NULL,
-  `tvPlatform` TEXT COLLATE utf8_spanish_ci NOT NULL,
+  `TVPlatform` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `applicationSubCategory` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `screenshot` TEXT COLLATE utf8_spanish_ci NOT NULL,
   `embedUrl` TEXT COLLATE utf8_spanish_ci NOT NULL,
@@ -123,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `tvseries` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `videogames`
+-- Volcado de datos para la tabla `tvseries`_
 --
 
 INSERT INTO `tvseries` (`name`, `description`, `TVPlatform`, `applicationSubCategory`, `screenshot`, `embedUrl`, `datePublished`) VALUES

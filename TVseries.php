@@ -12,7 +12,7 @@ $app->get('/tvseries', function ($req, $res, $args) {
     // Creamos un objeto collection + json con la lista de series
 
     // Obtenemos la lista de películas de la base de datos y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
-    $seriess = json_decode(\TVSerie::all());
+    $series = json_decode(\TVSerie::all());
 
     // Mostramos la vista
     return $this->view->render($res, 'tvserielist_template.php', [
@@ -116,7 +116,7 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
             $description = $item['value'];
             break;
         case "TVPlatform":
-            $gamePlatform = $item['value'];
+            $TVPlatform = $item['value'];
             break;
 
         case "applicationSubCategory":
