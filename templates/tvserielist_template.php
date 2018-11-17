@@ -31,8 +31,8 @@
             "data" : [
                 {"name" : "name", "value" : "{{ item.name }}", "prompt" : "Nombre de la Serie"},
                 {"name" : "description", "value" : "{{ item.description }}", "prompt" : "Descripción de la Serie"},
-                {"name" : "TVPlatform", "value" : "{{ item.director }}", "prompt" : "Canal de la Serie"},
-                {"name" : "applicationSubCategory", "value" : "{{ item.director }}", "prompt" : "Categoria de la Serie"},
+                {"name" : "TVPlatform", "value" : "{{ item.TVPlatform }}", "prompt" : "Canal de la Serie"},
+                {"name" : "applicationSubCategory", "value" : "{{ item.applicationSubCategory }}", "prompt" : "Categoria de la Serie"},
                 {"name" : "screenshot", "value" : "{{ item.screenshot }}", "prompt" : "URL of a captura de la serie"},
                 {"name" : "datePublished", "value" : "{{ item.datePublished }}", "prompt" : "Fecha de lanzamiento"},
                 {"name" : "embedUrl", "value" : "{{ item.embedUrl }}", "prompt" : "Trailer en Youtube"}        
