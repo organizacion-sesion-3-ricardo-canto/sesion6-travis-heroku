@@ -100,7 +100,7 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
 	// Creamos un objeto collection + json con el libro pasado como parámetro
 
 	// Obtenemos el libro de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
-	$nuevo_tvserie = \TVSerie::find($args['name']);	
+	$nuevo_tvserie = \TVserie::find($args['name']);	
 
     $template = $req->getParsedBody();
 
