@@ -12,4 +12,6 @@ composer install
 
 ## Acceso al servidor de producción (Heroku)
 
-http://APP_NAME.herokuapp.com
+Entiendo bien poco de programación web. Me ha costado bastante porque no entiendo buena parte del código. El problema que todavía queda por solucionar es aplicar algún estilo a los datos, pero como no es parte del curso lo dejo estar. Saludos.
+
+https://sesion6-travis-heroku-rcanto.herokuapp.com/
