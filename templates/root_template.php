@@ -10,7 +10,7 @@
                 {"rel" : "collection", "href" : "{{ path_for('books') }}","prompt":"Books"},
                 {"rel" : "collection", "href" : "{{ path_for('musicalbums') }}","prompt":"Music Albums"},
                 {"rel" : "collection", "href" : "{{ path_for('games') }}","prompt":"Videogames"},
-                {"rel" : "collection", "href" : "{{ path_for('tvseries') }}","prompt":"TV Series"}
+                {"rel" : "collection", "href" : "{{ path_for('Tvseries') }}","prompt":"TV Series"}
             ]
             }
 }	

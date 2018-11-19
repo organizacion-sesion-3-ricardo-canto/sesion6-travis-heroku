@@ -3,7 +3,7 @@
         "title" : "Tvserie Database",
             "type" : "Tvserie",
             "version" : "1.0",
-            "href" : "{{ path_for('series')}}",
+            "href" : "{{ path_for('Tvseries')}}",
       
             "links" : [
                 {"rel" : "profile" , "href" : "http://schema.org/Tvseries","prompt":"Perfil"},
@@ -15,7 +15,7 @@
       
             "items" : [
                 {
-                    "href" : "{{ path_for('series') }}/{{ item.id }}",
+                    "href" : "{{ path_for('Tvseries') }}/{{ item.id }}",
                         "data" : [
                             {"name" : "name", "value" : "{{ item.name }}", "prompt" : "Nombre de la Serie"},
                             {"name" : "description", "value" : "{{ item.description }}", "prompt" : "Descripción de la Serie"},
