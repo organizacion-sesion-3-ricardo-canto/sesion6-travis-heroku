@@ -15,7 +15,7 @@ $app->get('/Tvseries', function ($req, $res, $args) {
     $series = json_decode(\Tvserie::all());
 
     // Mostramos la vista
-    return $this->view->render($res, 'Tvserielist_template.php', [
+    return $this->view->render($res, 'tvserielist_template.php', [
         'items' => $series
     ]);
 })->setName('Tvseries');
@@ -31,7 +31,7 @@ $app->get('/Tvseries/{name}', function ($req, $res, $args) {
     $serie = json_decode($p);
 
     // Mostramos la vista
-    return $this->view->render($res, 'Tvserie_template.php', [
+    return $this->view->render($res, 'tvserie_template.php', [
         'item' => $serie
     ]);
 
