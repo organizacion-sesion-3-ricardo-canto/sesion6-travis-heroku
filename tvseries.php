@@ -18,7 +18,7 @@ $app->get('/tvseries', function ($req, $res, $args) {
     return $this->view->render($res, 'tvserielist_template.php', [
         'items' => $series
     ]);
-})->setName('Tvseries');
+})->setName('tvseries');
 
 
 /*  Obtención de una serie en concreto  */
@@ -80,16 +80,16 @@ $app->post('/tvseries', function ($req, $res, $args) {
         }    
     }
   
-    $Tvserie = new Tvserie;
-    $Tvserie->name = $name;
-    $Tvserie->description = $desc;
-    $Tvserie->TVPlatform = $plataf;
-    $Tvserie->applicationSubCategory = $category;
-    $Tvserie->screenshot =  $screenshot;
-    $Tvserie->datePublished = $date;
-    $Tvserie->embedUrl = $embedUrl;
+    $tvserie = new Tvserie;
+    $tvserie->name = $name;
+    $tvserie->description = $desc;
+    $tvserie->TVPlatform = $plataf;
+    $tvserie->applicationSubCategory = $category;
+    $tvserie->screenshot =  $screenshot;
+    $tvserie->datePublished = $date;
+    $tvserie->embedUrl = $embedUrl;
   
-    $Tvserie->save();
+    $tvserie->save();
 });
 
 
@@ -100,7 +100,7 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
 	// Creamos un objeto collection + json con el libro pasado como parámetro
 
 	// Obtenemos el libro de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
-	$nuevo_Tvserie = \Tvserie::find($args['name']);	
+	$nuevo_tvserie = \tvserie::find($args['name']);	
 
     $template = $req->getParsedBody();
 
@@ -136,14 +136,14 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
 		}
 	}
 
-	$nuevo_Tvserie['name'] = $name;
-	$nuevo_Tvserie['description'] = $description;
-	$nuevo_Tvserie['TVPlatform'] = $TVPlatform;
-	$nuevo_Tvserie['applicationSubCategory'] = $applicationSubCategory;
-	$nuevo_Tvserie['screenshot'] = $screenshot;
-	$nuevo_Tvserie['embedUrl'] = $embedUrl;
-	$nuevo_Tvserie['datePublished'] = $datePublished;
-	$nuevo_Tvserie->save();
+	$nuevo_tvserie['name'] = $name;
+	$nuevo_tvserie['description'] = $description;
+	$nuevo_tvserie['TVPlatform'] = $TVPlatform;
+	$nuevo_tvserie['applicationSubCategory'] = $applicationSubCategory;
+	$nuevo_tvserie['screenshot'] = $screenshot;
+	$nuevo_tvserie['embedUrl'] = $embedUrl;
+	$nuevo_tvserie['datePublished'] = $datePublished;
+	$nuevo_tvserie->save();
 
 });
 

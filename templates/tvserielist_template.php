@@ -3,7 +3,7 @@
         "title" : "Tvserie Database",
             "type" : "Tvserie",
             "version" : "1.0",
-            "href" : "{{ path_for('tvseries')}}",
+            "href" : "{{ path_for('Tvseries')}}",
 
             "links" : [
                 {"rel" : "profile" , "href" : "http://schema.org/Tvseries","prompt":"Perfil"},
