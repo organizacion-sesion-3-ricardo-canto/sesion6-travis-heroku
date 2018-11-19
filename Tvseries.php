@@ -7,7 +7,7 @@ class Tvserie extends \Illuminate\Database\Eloquent\Model
 }
 
 // Añadir el resto del código aquí
-$app->get('/Tvseries', function ($req, $res, $args) {
+$app->get('/tvseries', function ($req, $res, $args) {
 
     // Creamos un objeto collection + json con la lista de series
 
@@ -22,7 +22,7 @@ $app->get('/Tvseries', function ($req, $res, $args) {
 
 
 /*  Obtención de una serie en concreto  */
-$app->get('/Tvseries/{name}', function ($req, $res, $args) {
+$app->get('/tvseries/{name}', function ($req, $res, $args) {
 
     // Creamos un objeto collection + json con la serie pasada como parámetro
 
@@ -38,7 +38,7 @@ $app->get('/Tvseries/{name}', function ($req, $res, $args) {
 });
 
 /*  Eliminacion de una serie en concreto  */
-$app->delete('/Tvseries/{name}', function ($req, $res, $args) {
+$app->delete('/tvseries/{name}', function ($req, $res, $args) {
 	
     // Obtenemos la serie de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
     $p = \Tvserie::find($args['name']); 
@@ -47,7 +47,7 @@ $app->delete('/Tvseries/{name}', function ($req, $res, $args) {
 });
 
 /*Crea una nueva serie con los datos recibidos*/
-$app->post('/Tvseries', function ($req, $res, $args) {
+$app->post('/tvseries', function ($req, $res, $args) {
     //Código para peticiones de POST (creación de items)
     $template = $req->getParsedBody();
     $datos = $template['template']['data'];  
@@ -95,7 +95,7 @@ $app->post('/Tvseries', function ($req, $res, $args) {
 
 //Actualizar serie
 
-$app->put('/Tvseries/{name}', function ($req, $res, $args) {
+$app->put('/tvseries/{name}', function ($req, $res, $args) {
 
 	// Creamos un objeto collection + json con el libro pasado como parámetro
 
