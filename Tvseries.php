@@ -1,53 +1,53 @@
 <?php
 
 // Modelo de objetos que se corresponde con la tabla de MySQL
-class TVserie extends \Illuminate\Database\Eloquent\Model
+class Tvserie extends \Illuminate\Database\Eloquent\Model
 {
 	public $timestamps = false;
 }
 
 // Añadir el resto del código aquí
-$app->get('/tvseries', function ($req, $res, $args) {
+$app->get('/Tvseries', function ($req, $res, $args) {
 
     // Creamos un objeto collection + json con la lista de series
 
     // Obtenemos la lista de películas de la base de datos y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
-    $series = json_decode(\TVSerie::all());
+    $series = json_decode(\Tvserie::all());
 
     // Mostramos la vista
-    return $this->view->render($res, 'tvserielist_template.php', [
+    return $this->view->render($res, 'Tvserielist_template.php', [
         'items' => $series
     ]);
-})->setName('tvseries');
+})->setName('Tvseries');
 
 
 /*  Obtención de una serie en concreto  */
-$app->get('/tvseries/{name}', function ($req, $res, $args) {
+$app->get('/Tvseries/{name}', function ($req, $res, $args) {
 
     // Creamos un objeto collection + json con la serie pasada como parámetro
 
     // Obtenemos la serie de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
-    $p = \TVSerie::find($args['name']);  
+    $p = \Tvserie::find($args['name']);  
     $serie = json_decode($p);
 
     // Mostramos la vista
-    return $this->view->render($res, 'tvserie_template.php', [
+    return $this->view->render($res, 'Tvserie_template.php', [
         'item' => $serie
     ]);
 
 });
 
 /*  Eliminacion de una serie en concreto  */
-$app->delete('/tvseries/{name}', function ($req, $res, $args) {
+$app->delete('/Tvseries/{name}', function ($req, $res, $args) {
 	
     // Obtenemos la serie de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
-    $p = \TVSerie::find($args['name']); 
+    $p = \Tvserie::find($args['name']); 
     $p->delete();
 
 });
 
 /*Crea una nueva serie con los datos recibidos*/
-$app->post('/tvseries', function ($req, $res, $args) {
+$app->post('/Tvseries', function ($req, $res, $args) {
     //Código para peticiones de POST (creación de items)
     $template = $req->getParsedBody();
     $datos = $template['template']['data'];  
@@ -80,27 +80,27 @@ $app->post('/tvseries', function ($req, $res, $args) {
         }    
     }
   
-    $tvserie = new TVserie;
-    $tvserie->name = $name;
-    $tvserie->description = $desc;
-    $tvserie->TVPlatform = $plataf;
-    $tvserie->applicationSubCategory = $category;
-    $tvserie->screenshot =  $screenshot;
-    $tvserie->datePublished = $date;
-    $tvserie->embedUrl = $embedUrl;
+    $Tvserie = new Tvserie;
+    $Tvserie->name = $name;
+    $Tvserie->description = $desc;
+    $Tvserie->TVPlatform = $plataf;
+    $Tvserie->applicationSubCategory = $category;
+    $Tvserie->screenshot =  $screenshot;
+    $Tvserie->datePublished = $date;
+    $Tvserie->embedUrl = $embedUrl;
   
-    $tvserie->save();
+    $Tvserie->save();
 });
 
 
 //Actualizar serie
 
-$app->put('/tvseries/{name}', function ($req, $res, $args) {
+$app->put('/Tvseries/{name}', function ($req, $res, $args) {
 
 	// Creamos un objeto collection + json con el libro pasado como parámetro
 
 	// Obtenemos el libro de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
-	$nuevo_tvserie = \TVserie::find($args['name']);	
+	$nuevo_Tvserie = \Tvserie::find($args['name']);	
 
     $template = $req->getParsedBody();
 
@@ -136,14 +136,14 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
 		}
 	}
 
-	$nuevo_tvserie['name'] = $name;
-	$nuevo_tvserie['description'] = $description;
-	$nuevo_tvserie['TVPlatform'] = $TVPlatform;
-	$nuevo_tvserie['applicationSubCategory'] = $applicationSubCategory;
-	$nuevo_tvserie['screenshot'] = $screenshot;
-	$nuevo_tvserie['embedUrl'] = $embedUrl;
-	$nuevo_tvserie['datePublished'] = $datePublished;
-	$nuevo_tvserie->save();
+	$nuevo_Tvserie['name'] = $name;
+	$nuevo_Tvserie['description'] = $description;
+	$nuevo_Tvserie['TVPlatform'] = $TVPlatform;
+	$nuevo_Tvserie['applicationSubCategory'] = $applicationSubCategory;
+	$nuevo_Tvserie['screenshot'] = $screenshot;
+	$nuevo_Tvserie['embedUrl'] = $embedUrl;
+	$nuevo_Tvserie['datePublished'] = $datePublished;
+	$nuevo_Tvserie->save();
 
 });
 
